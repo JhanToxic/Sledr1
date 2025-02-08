@@ -1,13 +1,44 @@
 <!DOCTYPE html>
-<html lang="uk" dir="ltr">
-  <head>
+<html lang="uk">
+
+<head>
     <meta charset="utf-8">
-    <meta name="Practic only" content="">
-    <title>Practic</title>
-    <link rel="stylesheet" href="/css/master.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Слайдер про музикантів</title>
+    <link rel="stylesheet" href="/Css/main.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     
-  </head>
-  <body>
+</head>
+<body>
+  <div class="conteiner">
+    <div class="first-toogle" onclick="PervSlide()">
+        <i class='bx bxs-chevron-left-circle'></i>
+    </div>
+    <div class="box">
+      <!--блок з картинками-->
+        <div class="image-box">
+            <img src="1.JPG" alt="" class="slide">
+            <img src="2.JPG" alt="" class="slide">
+            <img src="3.JPG" alt="" class="slide">
+            <img src="4.JPG" alt="" class="slide">
+            <img src="5.JPG" alt="" class="slide">
+        </div>
+     </div>
+<!--Кнопочки-->
+     <div class="second-toogle" onclick="NextSlide()">
+        <i class='bx bxs-chevron-right-circle'></i>
+     </div>  
+    </div>
+<!-- Видео-->
+    <div class="video-bg">
+        <video loop muted autoplay>
+            <source src="Practic/8437-209165711.mp4" type="video/mp4">
+        </video>
+    </div>
+<div class="title">Недо Слайдер</div>
+    <div id="First"></div>
+    <div id="Second"></div>
     <script src="main.js"></script>
-  </body>
+    
+</body>
 </html>
