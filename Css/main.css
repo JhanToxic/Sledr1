@@ -1,116 +1,214 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-.video-bg{
-    width: 100vh;
-    height: 1000px;
-    display: block;
-    justify-content: center;
-}
-#Second{
-    height: 2000px;
-    background: linear-gradient(-45deg, rgba(2,0,36,1) 0%, rgba(121,0,33,1) 61%, rgb(72, 2, 82) 100%); 
-}
-.video-bg video{
-    position: fixed;
-    width: 100vw;
-    height: 1000px;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-    background-attachment: fixed;
-    z-index: -1;
-    background-size: cover;
-}
-.title{
-    position:fixed;
-    font-size: 90px;
-    color: antiquewhite;
-    top: 150px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 50px;
-    font-weight: bold;
-    text-align: center;
-    z-index: -1;
-    text-transform: capitalize;
-}
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Roboto', sans-serif;
 }
-
-/* Центрування контейнера */
-.conteiner {
-    height: 520px;
-    width: 820px;
-    border-radius: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 30px rgba(0, 0, 0, .9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+ .slider-block {
+     overflow: hidden;
+     width: 100%;
+     position: relative;
 }
-
-/* Кнопки слайдера */
-.first-toogle, .second-toogle {
-    height: 50px;
-    width: 50px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    border-radius: 50%;
-    cursor: pointer;
-background: linear-gradient(63deg, rgba(106,7,7,1) 16%, rgba(67,0,120,1) 51%, rgba(90,120,9,1) 88%);
-    border: none;
-    font-size: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+ .slider-block .conteiner {
+     height: 520px;
+     width: 820px;
+     border-radius: 20px;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     box-shadow: 0 0 30px rgba(0, 0, 0, .9);
+     display: flex;
+     justify-content: center;
+     align-items: center;
 }
-
-.first-toogle {
-    left: -60px;
+ .slider-block .conteiner .box {
+     height: 500px;
+     max-width: 700px;
+     overflow: hidden;
 }
-
-.second-toogle {
-    right: -60px;
+ .slider-block .conteiner .box .image-box {
+     display: flex;
+     width: 100%;
+     height: 100%;
+     overflow: hidden;
 }
-
-/* Стилізація зображень */
-.box {
-    height: 500px;
-    max-width: 700px;
-    overflow: hidden;
+ .slider-block .conteiner .box .image-box img {
+     height: 100%;
+     width: 100%;
+     border-radius: 10px;
+     transition: 0.3s;
 }
-
-.image-box {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+ .slider-block .conteiner .first-toogle, .slider-block .conteiner .second-toogle {
+     height: 50px;
+     width: 50px;
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     border-radius: 50%;
+     cursor: pointer;
+     background: linear-gradient(63deg, rgba(106, 7, 7, 1) 16%, rgba(67, 0, 120, 1) 51%, rgba(90, 120, 9, 1) 88%);
+     border: none;
+     font-size: 24px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
 }
-
-.image-box img {
-    height: 100%;
-    width: 100%;
-    border-radius: 10px;
-    transition: .3s;
+ .slider-block .conteiner .first-toogle i, .slider-block .conteiner .second-toogle i {
+     color: #fff;
+     font-size: 45px;
+     text-align: center;
+     transition: 0.3s;
 }
-
-/* Анімація іконок */
-i {
-    color: #ffffff;
-    font-size: 45px;
-    text-align: center;
-    transition: .3s;
+ .slider-block .conteiner .first-toogle i:hover, .slider-block .conteiner .second-toogle i:hover {
+     color: black;
 }
-
-i:hover {
-    color: black;
+ .slider-block .conteiner .first-toogle {
+     left: -60px;
 }
+ .slider-block .conteiner .second-toogle {
+     right: -60px;
+}
+ .slider-block .video-bg {
+     width: 100vh;
+     height: 1000px;
+     display: block;
+     justify-content: center;
+}
+ .slider-block .video-bg video {
+     position: fixed;
+     width: 100vw;
+     height: 1000px;
+     top: 0;
+     left: 0;
+     object-fit: cover;
+     background-attachment: fixed;
+     z-index: -1;
+     background-size: cover;
+}
+ .slider-block .title {
+     position: fixed;
+     color: antiquewhite;
+     top: 150px;
+     left: 50%;
+     transform: translateX(-50%);
+     font-size: 50px;
+     font-weight: bold;
+     text-align: center;
+     z-index: -1;
+     text-transform: capitalize;
+}
+ #first {
+     background: linear-gradient(-45deg, rgba(2, 0, 36, 1) 0%, #000 61%, #480252 100%);
+     padding: 40px 20px;
+     color: white;
+     line-height: 1.5;
+}
+ #first .title {
+     text-align: center;
+     font-size: 36px;
+     margin-bottom: 20px;
+}
+ #first .content-wrapper .text {
+     font-size: 18px;
+     margin-bottom: 20px;
+}
+ #first .content-wrapper .text .speaker-inline {
+     width: 40px;
+     display: inline-block;
+}
+ #first .content-wrapper .speaker-wrapper .speaker {
+     font-weight: 400;
+     font-size: 28px;
+     text-align: center;
+}
+ #first .content-wrapper .speaker-wrapper .speaker-photo {
+     display: block;
+     margin: 20px auto;
+     max-width: 100%;
+}
+ #second {
+     background: linear-gradient(-45deg, rgba(2, 0, 36, 1) 0%, rgba(121, 0, 33, 1) 61%, #480252 100%);
+     padding: 40px 20px;
+     color: white;
+     line-height: 1.5;
+}
+ #second .title {
+     text-align: center;
+     font-size: 48px;
+     margin-bottom: 20px;
+}
+ #second .content-wrapper .text-wrapper .text {
+     font-size: 18px;
+     margin-bottom: 20px;
+}
+ #second .content-wrapper .text-wrapper .text .speaker-inline {
+     width: 40px;
+     display: inline-block;
+}
+ #second .content-wrapper .speaker-wrapper .speaker {
+     font-weight: 400;
+     font-size: 28px;
+     text-align: center;
+}
+ #second .content-wrapper .speaker-wrapper .speaker-photo {
+     display: block;
+     margin: 20px auto;
+     max-width: 100%;
+}
+ #second .content-wrapper .speaker-wrapper .speaker-desktop {
+     font-weight: 400;
+     font-size: 28px;
+     text-align: center;
+     display: none;
+}
+ @media (min-width: 768px) {
+     #first .content-wrapper {
+         display: flex;
+         flex-direction: row;
+         flex-wrap: nowrap;
+         justify-content: space-between;
+         align-items: center;
+    }
+     #first .content-wrapper .text {
+         width: 48%;
+    }
+     #first .content-wrapper .speaker-wrapper {
+         width: 48%;
+         display: flex;
+         flex-direction: column-reverse;
+    }
+     #first .content-wrapper .speaker-wrapper .speaker-photo {
+         max-width: 400px;
+    }
+     #second .content-wrapper .text-wrapper {
+         float: left;
+         width: 48%;
+         display: block;
+         line-height: 462px;
+    }
+     #second .content-wrapper .text-wrapper .text {
+         line-height: 1.5;
+         display: inline-block;
+         vertical-align: middle;
+    }
+     #second .content-wrapper:after {
+         content: '';
+         display: block;
+         clear: both;
+    }
+     #second .content-wrapper .speaker-wrapper {
+         float: right;
+         width: 48%;
+    }
+     #second .content-wrapper .speaker-wrapper .speaker {
+         display: none;
+    }
+     #second .content-wrapper .speaker-wrapper .speaker-photo {
+         max-width: 400px;
+    }
+     #second .content-wrapper .speaker-wrapper .speaker-desktop {
+         display: block;
+    }
+}
+ 
